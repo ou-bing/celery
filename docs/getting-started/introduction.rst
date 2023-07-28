@@ -1,7 +1,7 @@
 .. _intro:
 
 ========================
- Introduction to Celery
+ Celery 简介
 ========================
 
 .. contents::

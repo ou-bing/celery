@@ -1,7 +1,7 @@
 .. _signals:
 
 =======
-Signals
+信号
 =======
 
 .. contents::

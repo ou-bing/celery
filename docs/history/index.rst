@@ -1,7 +1,7 @@
 .. _history:
 
 =========
- History
+ 历史
 =========
 
 This section contains historical change histories, for the latest

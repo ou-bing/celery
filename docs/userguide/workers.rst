@@ -1,7 +1,7 @@
 .. _guide-workers:
 
 ===============
- Workers Guide
+ 工作者指南
 ===============
 
 .. contents::

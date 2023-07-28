@@ -1,7 +1,7 @@
 .. _community:
 
 =======================
-Community Resources
+社区资源
 =======================
 
 This is a list of external blog posts, tutorials, and slides related

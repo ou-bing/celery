@@ -1,7 +1,7 @@
 .. _guide-app:
 
 =============
- Application
+ 应用程序
 =============
 
 .. contents::

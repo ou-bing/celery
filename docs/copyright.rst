@@ -1,4 +1,4 @@
-Copyright
+版权
 =========
 
 *Celery User Manual*

@@ -1,7 +1,7 @@
 .. _apiref:
 
 ===============
- API Reference
+ API 手册
 ===============
 
 :Release: |version|

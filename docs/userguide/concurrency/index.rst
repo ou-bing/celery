@@ -1,7 +1,7 @@
 .. _concurrency:
 
 =============
- Concurrency
+ 并发
 =============
 
 :Release: |version|

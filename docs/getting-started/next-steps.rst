@@ -1,7 +1,7 @@
 .. _next-steps:
 
 ============
- Next Steps
+ 接下来
 ============
 
 The :ref:`first-steps` guide is intentionally minimal. In this guide

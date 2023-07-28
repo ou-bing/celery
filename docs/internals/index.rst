@@ -1,7 +1,7 @@
 .. _internals:
 
 ===========
- Internals
+ 内部实现
 ===========
 
 :Release: |version|

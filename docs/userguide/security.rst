@@ -1,7 +1,7 @@
 .. _guide-security:
 
 ==========
- Security
+ 安全
 ==========
 
 .. contents::

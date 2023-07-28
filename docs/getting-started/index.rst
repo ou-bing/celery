@@ -1,5 +1,5 @@
 =================
- Getting Started
+ 入门
 =================
 
 :Release: |version|

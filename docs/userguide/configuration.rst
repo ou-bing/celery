@@ -1,7 +1,7 @@
 .. _configuration:
 
 ============================
- Configuration and defaults
+ 配置和默认值
 ============================
 
 This document describes the configuration options available.

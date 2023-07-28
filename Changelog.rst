@@ -1,7 +1,7 @@
 .. _changelog:
 
 ================
- Change history
+ 变更记录
 ================
 
 This document contains change notes for bugfix & new features

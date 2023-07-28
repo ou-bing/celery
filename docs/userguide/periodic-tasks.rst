@@ -1,7 +1,7 @@
 .. _guide-beat:
 
 ================
- Periodic Tasks
+ 定时任务
 ================
 
 .. contents::

@@ -1,41 +1,36 @@
 =================================
- Celery - Distributed Task Queue
+ Celery - 分布式任务队列
 =================================
 
-Celery is a simple, flexible, and reliable distributed system to
-process vast amounts of messages, while providing operations with
-the tools required to maintain such a system.
+Celery 是一个简单、灵活且可靠的分布式系统，用来处理海量消息，同时还提供了工具箱用来维护维护这种系统。
 
-It's a task queue with focus on real-time processing, while also
-supporting task scheduling.
+它是一个专注于实时处理的任务队列，同时还支持任务调度。
 
-Celery has a large and diverse community of users and contributors,
-you should come join us :ref:`on IRC <irc-channel>`
-or :ref:`our mailing-list <mailing-list>`.
+Celery 有一个庞大且多样化的用户和贡献者社区，你可以加入我们的 :ref:`IRC <irc-channel>`
+或我们的 :ref:`邮件列表 <mailing-list>`。
 
-Celery is Open Source and licensed under the `BSD License`_.
+Celery 是开源的，使用 `BSD License`_。
 
-Donations
+捐赠
 =========
 
-This project relies on your generous donations.
+这个项目依赖于你们的慷慨捐赠。
 
-If you are using Celery to create a commercial product, please consider becoming our `backer`_ or our `sponsor`_ to ensure Celery's future.
+如果您正在使用 Celery 创建商业产品，请考虑成为我们的 `支持者`_ 或 `赞助商`_ 以保障 Celery 的未来
 
-.. _`backer`: https://opencollective.com/celery#backer
-.. _`sponsor`: https://opencollective.com/celery#sponsor
+.. _`支持者`: https://opencollective.com/celery#backer
+.. _`赞助商`: https://opencollective.com/celery#sponsor
 
-Getting Started
+入门
 ===============
 
-- If you're new to Celery you can get started by following
-  the :ref:`first-steps` tutorial.
+- 如果你不熟悉 Celery，可以从 :ref:`first-steps` 开始。
 
-- You can also check out the :ref:`FAQ <faq>`.
+- 你也可以查看 :ref:`常见问题解答 <faq>`.
 
 .. _`BSD License`: http://www.opensource.org/licenses/BSD-3-Clause
 
-Contents
+内容
 ========
 
 .. toctree::

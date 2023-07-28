@@ -2,7 +2,7 @@
 .. _first-steps:
 
 =========================
- First Steps with Celery
+ Celery 的第一步
 =========================
 
 Celery is a task queue with batteries included.

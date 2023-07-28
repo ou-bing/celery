@@ -1,7 +1,7 @@
 .. _guide:
 
 ============
- User Guide
+ 用户指南
 ============
 
 :Release: |version|

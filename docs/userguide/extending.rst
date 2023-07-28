@@ -1,7 +1,7 @@
 .. _guide-extending:
 
 ==========================
- Extensions and Bootsteps
+ 扩展和启动步骤
 ==========================
 
 .. contents::

@@ -1,7 +1,7 @@
 .. _sphinx:
 
 ==============================
- Documenting Tasks with Sphinx
+ 使用 Sphinx 生成任务文档
 ==============================
 
 This document describes how auto-generate documentation for Tasks using Sphinx.

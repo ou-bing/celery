@@ -1,7 +1,7 @@
 .. _contributing:
 
 ==============
- Contributing
+ 贡献
 ==============
 
 Welcome!

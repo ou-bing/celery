@@ -1,12 +1,11 @@
 .. _celery-installation:
 
-Installation
+安装
 ============
 
-You can install Celery either via the Python Package Index (PyPI)
-or from source.
+您可以使用 Python Package Index（PyPI）或从源代码安装 Celery。
 
-To install using :command:`pip`:
+使用 pip 进行安装：
 
 
 .. code-block:: console
@@ -15,16 +14,12 @@ To install using :command:`pip`:
 
 .. _bundles:
 
-Bundles
+捆绑包
 -------
 
-Celery also defines a group of bundles that can be used
-to install Celery and the dependencies for a given feature.
+Celery 还定义了一组捆绑包，可以用来安装 Celery 和指定特性的依赖项。
 
-You can specify these in your requirements or on the :command:`pip`
-command-line by using brackets. Multiple bundles can be specified by
-separating them by commas.
-
+你可以在你的 requirements 中指定它们，也可以在 :command:`pip` 名上使用括号，多个捆绑包可以使用 , 分割来指定。
 
 .. code-block:: console
 
@@ -32,9 +27,9 @@ separating them by commas.
 
     $ pip install "celery[librabbitmq,redis,auth,msgpack]"
 
-The following bundles are available:
+以下捆绑包是可用的:
 
-Serializers
+序列化器
 ~~~~~~~~~~~
 
 :``celery[auth]``:
@@ -46,7 +41,7 @@ Serializers
 :``celery[yaml]``:
     for using the yaml serializer.
 
-Concurrency
+并发
 ~~~~~~~~~~~
 
 :``celery[eventlet]``:
@@ -55,7 +50,7 @@ Concurrency
 :``celery[gevent]``:
     for using the :pypi:`gevent` pool.
 
-Transports and Backends
+传输模块和后端
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 :``celery[librabbitmq]``:
@@ -118,14 +113,14 @@ Transports and Backends
 
 .. _celery-installing-from-source:
 
-Downloading and installing from source
+下载源代码并安装
 --------------------------------------
 
-Download the latest version of Celery from PyPI:
+从 PyPI 下载最新版本的 Celery：
 
 https://pypi.org/project/celery/
 
-You can install it by doing the following,:
+您可以通过执行以下操作来进行安装：
 
 
 .. code-block:: console
@@ -135,22 +130,19 @@ You can install it by doing the following,:
     $ python setup.py build
     # python setup.py install
 
-The last command must be executed as a privileged user if
-you aren't currently using a virtualenv.
+如果您当前没有使用 virtualenv，则最后一个命令必须以 root 用户身份执行。
 
 .. _celery-installing-from-git:
 
-Using the development version
+使用开发版本
 -----------------------------
 
-With pip
+使用 pip
 ~~~~~~~~
 
-The Celery development version also requires the development
-versions of :pypi:`kombu`, :pypi:`amqp`, :pypi:`billiard`, and :pypi:`vine`.
+Celery 的开发版本也需要 :pypi:`kombu`、:pypi:`amqp`、:pypi:`billiard` 和 pypi:`vine` 的开发版本。
 
-You can install the latest snapshot of these using the following
-pip commands:
+您可以使用以下 pip 命令安装它们的最新快照：
 
 
 .. code-block:: console
@@ -161,7 +153,7 @@ pip commands:
     $ pip install https://github.com/celery/kombu/zipball/main#egg=kombu
     $ pip install https://github.com/celery/vine/zipball/main#egg=vine
 
-With git
+使用 git
 ~~~~~~~~
 
-Please see the :ref:`Contributing <contributing>` section.
+请参考 :ref:`Contributing <contributing>` 部分。

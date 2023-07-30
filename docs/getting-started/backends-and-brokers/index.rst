@@ -7,11 +7,11 @@
 :Release: |version|
 :Date: |today|
 
-Celery supports several message transport alternatives.
+Celery 支持多种消息传输方式。
 
 .. _broker_toc:
 
-Broker Instructions
+代理说明
 ===================
 
 .. toctree::
@@ -23,15 +23,13 @@ Broker Instructions
 
 .. _broker-overview:
 
-Broker Overview
+代理概述
 ===============
 
-This is comparison table of the different transports supports,
-more information can be found in the documentation for each
-individual transport (see :ref:`broker_toc`).
+这是不同传输模块的支持比较表，在每个传输模块各自的文档中可以找到更多信息（参考:ref:`broker_toc`）。
 
 +---------------+--------------+----------------+--------------------+
-| **Name**      | **Status**   | **Monitoring** | **Remote Control** |
+| **名称**      | **状态**      | **监控**        | **远程控制**        |
 +---------------+--------------+----------------+--------------------+
 | *RabbitMQ*    | Stable       | Yes            | Yes                |
 +---------------+--------------+----------------+--------------------+
@@ -42,62 +40,64 @@ individual transport (see :ref:`broker_toc`).
 | *Zookeeper*   | Experimental | No             | No                 |
 +---------------+--------------+----------------+--------------------+
 
-Experimental brokers may be functional but they don't have
-dedicated maintainers.
+实验性的代理是可用的，但是它们没有专门的维护人员。
 
-Missing monitor support means that the transport doesn't
-implement events, and as such Flower, `celery events`, `celerymon`
-and other event-based monitoring tools won't work.
+缺少监控支持意味着该传输模块没有实现事件，因此 Flower、 `celery events`、 `celerymon`
+等基于事件的监控工具将无法工作。
 
-Remote control means the ability to inspect and manage workers
-at runtime using the `celery inspect` and `celery control` commands
-(and other tools using the remote control API).
+远程控制是指使用 `celery inspect` 和 `celery control` 命令在运行时检查和管理工人的能力（其他工具会使用远程控制的 API）。
 
-Summaries
+摘要
 =========
 
-*Note: This section is not comprehensive of backends and brokers.*
+*注意：这个章节没有详细介绍后端和代理。*
 
-Celery has the ability to communicate and store with many different backends (Result Stores) and brokers (Message Transports).
+Celery 具有与许多不同的后端(结果存储)和代理(消息传输)通信的能力。
 
 Redis
 -----
 
-Redis can be both a backend and a broker.
+Redis 可以同时作为后端和代理。
 
-**As a Broker:** Redis works well for rapid transport of small messages. Large messages can congest the system.
+**作为代理：** Redis 对于快速传输少量消息非常有效，大量消息则会阻塞系统。
 
-:ref:`See documentation for details <broker-redis>`
+:ref:`查看文档获取详情 <broker-redis>`
 
-**As a Backend:** Redis is a super fast K/V store, making it very efficient for fetching the results of a task call. As with the design of Redis, you do have to consider the limit memory available to store your data, and how you handle data persistence. If result persistence is important, consider using another DB for your backend.
+**作为后端：** Redis 是一个超快的 K/V 存储，这使其能够非常高效地获取任务调用的结果。
+鉴于 Redis 的设计，你必须考虑存储数据的可用内存限制，以及如何持久化你的数据。
+如果结果持久化很重要，考虑使用其他的数据库作为你的后端。
 
 RabbitMQ
 --------
 
-RabbitMQ is a broker.
+RabbitMQ 是一个代理
 
-**As a Broker:** RabbitMQ handles larger messages better than Redis, however if many messages are coming in very quickly, scaling can become a concern and Redis or SQS should be considered unless RabbitMQ is running at very large scale.
+**作为代理：** RabbitMQ 在处理大量消息时比 Redis 更好，但是如果许多消息非常快的传入，扩展可能会成为一个问题。
+除非 RabbitMQ 以非常大的规模运行，否则应考虑使用 Redis 或 SQS。
 
-:ref:`See documentation for details <broker-rabbitmq>`
 
-**As a Backend:** RabbitMQ can store results via ``rpc://`` backend. This backend creates separate temporary queue for each client.
+:ref:`查看文档获取详情 <broker-rabbitmq>`
 
-*Note: RabbitMQ (as the broker) and Redis (as the backend) are very commonly used together. If more guaranteed long-term persistence is needed from the result store, consider using PostgreSQL or MySQL (through SQLAlchemy), Cassandra, or a custom defined backend.*
+**作为后端：** RabbitMQ 可以作为 ``rpc://`` 后端存储结果，此后端为每个客户端创建单独的临时队列。
+
+*注意： RabbitMQ 作为代理、 Redis 作为后端经常放在一起使用，如果结果存储需要更有保障的长期持久性，可以考虑使用 PostgreSQL/MySQL（通过 SQLAlchemy）、Cassandra 或自定义后端。*
 
 SQS
 ---
 
-SQS is a broker.
+SQS 是代理。
 
-If you already integrate tightly with AWS, and are familiar with SQS, it presents a great option as a broker. It is extremely scalable and completely managed, and manages task delegation similarly to RabbitMQ. It does lack some of the features of the RabbitMQ broker such as ``worker remote control commands``.
+如果你已经与 AWS 紧密集成，并且熟悉 SQS，那么它是一个很好的代理选择。
+它具有极高的可扩展性和完整的可管理性，任务委托管理类似于 RabbitMQ。
 
-:ref:`See documentation for details <broker-sqs>`
+:ref:`查看文档获取详情 <broker-sqs>`
 
 SQLAlchemy
 ----------
 
-SQLAlchemy is a backend.
+SQLAlchemy 是后端。
 
-It allows Celery to interface with MySQL, PostgreSQL, SQlite, and more. It is a ORM, and is the way Celery can use a SQL DB as a result backend.
+它允许 Celery 连接 MySQL、PostgreSQL、SQlite 以及更多。
+他是一个 ORM，Celery 通过它将关系型数据库作为结果存储的后端。
 
-:ref:`See documentation for details <conf-database-result-backend>`
+:ref:`查看文档获取详情 <conf-database-result-backend>`
